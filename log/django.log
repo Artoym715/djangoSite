@@ -9,3 +9,18 @@ F:\Python\django\HomeWorkSite\HomeWorkapp1\views.py changed, reloading.
 Watching for file changes with StatReloader
 "GET / HTTP/1.1" 200 247
 "GET /about/ HTTP/1.1" 200 285
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 247
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2444
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 247
+Watching for file changes with StatReloader
