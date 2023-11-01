@@ -1,0 +1,11 @@
+{% extends 'HomeWorkapp3/base.html' %}
+
+{% block title %}Продукты пользователя{% endblock %}
+
+{% block content %}
+    <h2>все продукты пользователя: {{ user.name }} за последние {{ days }} дней</h2>
+    {% for product in product_set %}
+
+                <p>{{ product }}</p>
+    {% endfor %}
+{% endblock %}

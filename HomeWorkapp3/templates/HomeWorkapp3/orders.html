@@ -1,0 +1,15 @@
+{% extends 'HomeWorkapp3/base.html' %}
+
+{% block title %}Заказы пользователя{% endblock %}
+
+{% block content %}
+    <h2>все заказы пользователя: {{ user.name }}</h2>
+    {% for order in orders %}
+        <h1>Заказ</h1>
+        <p>{{ order.date_ordered }}</p>
+        <p>{{ order.total_price }}</p>
+                <h3>Продукты</h3>
+                <p>{{ products.pop }}</p>
+
+    {% endfor %}
+{% endblock %}
