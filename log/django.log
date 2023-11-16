@@ -114,3 +114,38 @@ Watching for file changes with StatReloader
 "GET /user_sorted/3/12/ HTTP/1.1" 200 767
 "GET /user_sorted/4/12/ HTTP/1.1" 200 271
 "GET /user_sorted/8/12/ HTTP/1.1" 200 271
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 637
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2853
+Not Found: /HomeWorkapp3/product_update_id
+"GET /HomeWorkapp3/product_update_id HTTP/1.1" 404 2910
+F:\Python\django\HomeWorkSite\HomeWorkapp3\urls.py changed, reloading.
+Watching for file changes with StatReloader
+F:\Python\django\HomeWorkSite\HomeWorkapp3\urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 637
+Not Found: /HomeWorkapp3/product_update_id
+"GET /HomeWorkapp3/product_update_id HTTP/1.1" 404 3308
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 637
+Not Found: /HomeWorkapp3/product_update_id
+"GET /HomeWorkapp3/product_update_id HTTP/1.1" 404 3308
+"GET / HTTP/1.1" 200 1586
+Not Found: /homework4/product_update_id
+"GET /homework4/product_update_id HTTP/1.1" 404 3299
+"GET / HTTP/1.1" 200 1585
+Not Found: /HomeWorkapp3/product_update_id
+"GET /HomeWorkapp3/product_update_id HTTP/1.1" 404 3308
+"GET / HTTP/1.1" 200 1572
+"GET /product_update_id HTTP/1.1" 301 0
+"GET /product_update_id/ HTTP/1.1" 200 1288
+"POST /product_update_id/ HTTP/1.1" 302 0
+Not Found: /HomeWorkapp3/product_update/6
+"GET /HomeWorkapp3/product_update/6 HTTP/1.1" 404 3305
+F:\Python\django\HomeWorkSite\HomeWorkapp3\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /product_update_id/ HTTP/1.1" 200 1288
+"POST /product_update_id/ HTTP/1.1" 302 0
+"GET /product_update/4 HTTP/1.1" 200 1304
+"GET /product_update_id/ HTTP/1.1" 200 1288

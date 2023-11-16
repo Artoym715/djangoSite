@@ -1,0 +1,11 @@
+{% extends 'HomeWorkapp3/base.html' %}
+
+{% block title %}Обновление карточки продукта{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Отправить">
+</form>
+{% endblock %}
