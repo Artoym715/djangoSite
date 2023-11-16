@@ -149,3 +149,4 @@ Watching for file changes with StatReloader
 "POST /product_update_id/ HTTP/1.1" 302 0
 "GET /product_update/4 HTTP/1.1" 200 1304
 "GET /product_update_id/ HTTP/1.1" 200 1288
+"GET / HTTP/1.1" 200 1664
