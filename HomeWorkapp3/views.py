@@ -14,6 +14,13 @@ def index(request):
     return render(request, "HomeWorkapp3/index.html")
 
 
+# вывод списка всех рользователей
+def users(request):
+    users = User.objects.all()
+    logger.info(f'Страница "Список пользователей" успешно открыта')
+    return render(request, 'HomeWorkapp3/users.html', {'users': users})
+
+
 def basket(request, user_id):
     products = []
     user = User.objects.filter(pk=user_id).first()

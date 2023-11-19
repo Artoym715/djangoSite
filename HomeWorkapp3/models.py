@@ -14,6 +14,7 @@ class User(models.Model):
     def __str__(self):
         return f'Username: {self.name}, email: {self.email},  phone: {self.phone}, address: {self.address}'
 
+
 class Product(models.Model):
     name = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=8, decimal_places=2)

@@ -1,0 +1,11 @@
+{% extends 'HomeWorkapp3/base.html' %}
+
+{% block title %}Пользователи{% endblock %}
+
+{% block content %}
+    <h2>Все пользователи:</h2>
+    {% for user in users %}
+
+                <p>{{ user }}</p>
+    {% endfor %}
+{% endblock %}
