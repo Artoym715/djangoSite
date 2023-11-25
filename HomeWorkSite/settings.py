@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,12 +20,23 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-uvuxetdmt3g*+d1fpoo6cnq+$th3g40!z(ml_172op0tg_u-os'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'Grizly715.pythonanywhere.com',
+
+]
+
+INTERNAL_IPS = {
+    '127.0.0.1',
+}
 
 
 # Application definition
@@ -40,9 +51,11 @@ INSTALLED_APPS = [
     'HomeWorkapp1',
     'HomeWorkapp2',
     'HomeWorkapp3',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -77,10 +90,17 @@ WSGI_APPLICATION = 'HomeWorkSite.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'Grizly715$default',
+            'USER': 'Grizly715',
+            'PASSWORD': os.getenv('MYSQL_PASSWORD'),
+            'HOST': 'Grizly715.mysql.pythonanywhere-services.com',
+            'OPTIONS': {
+                'init_command': "SET NAMES 'utf8mb4'; SET sql_mode='STRICT_TRANS_TABLES'",
+                'charset': 'utf8mb4',
+            },
+        }
 }
 
 
@@ -119,32 +139,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-LOGGING = {
-            'version': 1,
-            'disable_existing_loggers': False,
-            'handlers': {
-                'console': {
-                        'class': 'logging.StreamHandler',
-                    },
-                'file':
-                    {
-                        'class': 'logging.FileHandler',
-                        'filename': './log/django.log',
-                      },
-                    },
-            'loggers': {
-                'django': {
-                        'handlers': ['console', 'file'],
-                        'level': 'INFO',
-                    },
-                'testapp': {
-                    'handlers': ['console'], 'level': 'DEBUG', 'propagate': True,
-                },
-            },
-}

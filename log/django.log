@@ -491,3 +491,13 @@ Watching for file changes with StatReloader
 "GET /admin/HomeWorkapp3/order/ HTTP/1.1" 200 14163
 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 11094
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 13300
