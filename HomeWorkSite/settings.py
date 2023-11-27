@@ -30,7 +30,7 @@ CSRF_COOKIE_SECURE = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'Grizly715.pythonanywhere.com',
+    'grizly715.beget.tech',
 
 ]
 
